@@ -13,7 +13,7 @@ docker image build -t tomcat .
 docker container run --rm -it -d --name tomcat --publish 8081:8080 tomcat
 
 echo.
-echo "Link: http://localhost:8081/AMV-alpha/"
+echo "Link: http://localhost:8081/bacit-web-1.0-SNAPSHOT/"
 echo.
 
 CHOICE /C YN /M "Trykk Y for REBUILD, N eller kryss ut terminalvindu for AVSLUTT"

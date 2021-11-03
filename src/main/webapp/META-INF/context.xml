@@ -1,0 +1,29 @@
+<Context>
+    <Resource name="jdbc/database"
+              auth="Container"
+              type="javax.sql.DataSource"
+              username="root"
+              password="12345"
+              driverClassName="org.mariadb.jdbc.Driver"
+              url="jdbc:mariadb://172.17.0.1:3308/Ammar"
+              maxTotal="100"
+              maxIdle="3"
+              removeAbandonedOnBorrow="true"
+              removeAbandonedOnMaintenance="true"
+              removeAbandonedTimeout="10"
+    />
+
+    <Realm className="org.apache.catalina.realm.DataSourceRealm"
+           userTable="User"
+           userIDCol="User_ID"
+           userNameCol="Email"
+           userCredCol="Password"
+           userRoleTable="User_roles"
+           roleNameCol="role_name"
+           localDataSource="true"
+           dataSourceName="jdbc/database"
+           digest="SHA-256">
+        <CredentialHandler className="org.apache.catalina.realm.MessageDigestCredentialHandler"
+                           algorithm="SHA-256" iterations="1" saltLength="0" encoding="ISO-8859-1" />
+    </Realm>
+</Context>

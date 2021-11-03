@@ -7,12 +7,11 @@ CREATE TABLE Users
 (
     FirstName   VARCHAR(255) NOT NULL,
     LastName    VARCHAR(255) NOT NULL,
-    Email       VARCHAR(255) NOT NULL,
-    Password    VARCHAR(255) NOT NULL,
-    Admin       BOOLEAN NOT NULL
+    Email       VARCHAR(255) UNIQUE NOT NULL,
+    Password    VARCHAR(255) NOT NULL
 );
 
-
+/*
 INSERT INTO Users (FirstName, LastName, Email, Password, Admin)
 VALUES ('Viktor', 'Hokland', 'viktor@gmail.com', '123456', true);
 
@@ -24,3 +23,6 @@ VALUES ('Sebastian', 'Larsen', 'sebastian@gmail.com', '123456', false);
 
 INSERT INTO Users (FirstName, LastName, Email, Password, Admin)
 VALUES ('Ammar', 'Haddad', 'ammar@gmail.com', '123456', false);
+
+
+ */
