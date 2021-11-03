@@ -19,13 +19,26 @@ public class GreetingWithDbServlet extends HttpServlet
     {
         response.setContentType("text/html;charset=UTF-8");
         PrintWriter out = response.getWriter();
-        
+
         out.println("<html><body>");
         out.println("<form action = 'GreetingWithDbServlet' method = 'POST'>");
+
+        out.println("<Label for = 'FirstName'>First Name:</Label>");
         out.println("<input type = 'text' name = 'FirstName'>");
+        out.println("<br>");
+
+        out.println("<Label for = 'LastName'>Last Name:</Label>");
         out.println("<input type = 'text' name = 'LastName'>");
+        out.println("<br>");
+
+        out.println("<Label for = 'Email'>Email:</Label>");
         out.println("<input type = 'text' name = 'Email'>");
+        out.println("<br>");
+
+        out.println("<Label for = 'Password'>Password:</Label>");
         out.println("<input type = 'text' name = 'Password'>");
+        out.println("<br>");
+
         out.println("<input type = 'submit'>");
         out.println("</form>");
         out.println("</body></html>");
